@@ -14,7 +14,7 @@ function getFactors(n) {
       }
     }
   
-    r
+    
     return factors
   }
   
