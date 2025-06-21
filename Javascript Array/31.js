@@ -1,6 +1,6 @@
 function remove_element(arr, value) {
 
-    return arr.filter(function (element) {
+    return arr.filter( (element) =>{
 
       return element !== value;
     });
