@@ -1,0 +1,33 @@
+<html>
+<body>
+    <button id="back" onclick="prevSlide()" style="display:none">Back</button>
+    <img id="slide" src="img1.jpg" width="300" height="200">
+    <button id="next" onclick="nextSlide()">Next</button>
+    <script>
+        let imgs = ["img1.jpg", "img2.jpg", "img3.jpg", "img4.jpg", "img5.jpg"];
+        let idx = 0;
+        const slide = document.getElementById("slide");
+
+        function updateButtons() {
+            document.getElementById("back").style.display = idx > 0 ? "inline" : "none";
+            document.getElementById("next").style.display = idx < imgs.length - 1 ? "inline" : "none";
+        }
+
+        function nextSlide() {
+            if (idx < imgs.length - 1) {
+                idx++;
+                slide.src = imgs[idx];
+                updateButtons();
+            }
+        }
+
+        function prevSlide() {
+            if (idx > 0) {
+                idx--;
+                slide.src = imgs[idx];
+                updateButtons();
+            }
+        }
+    </script>
+</body>
+</html>

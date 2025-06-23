@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .highlight { color: red; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <p id="p1">First paragraph.</p>
+    <p id="p3">Second paragraph.</p>
+    <script>
+        let newPara = document.createElement("p");
+
+        newPara.id = "p2";
+
+        newPara.innerText = "Inserted paragraph.";
+
+        document.getElementById("p3").before(newPara);
+
+
+        newPara.addEventListener("mouseover", () => newPara.className = "highlight");
+        
+        newPara.addEventListener("mouseout", () => newPara.className = "");
+    </script>
+</body>
+</html>

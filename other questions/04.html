@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Time Converter & Timer</title>
+  
+  <script>
+    function convertToUTC() {
+      const localDate = new Date();
+      alert("UTC Time: " + localDate.toUTCString());
+    }
+
+    function startTimer(delayInSeconds) {
+      setTimeout(() => {
+        const now = new Date();
+        alert("Timer Done! Current Local Time: " + now.toLocaleString());
+      }, delayInSeconds * 1000);
+    }
+  </script>
+</head>
+<body>
+  <button onclick="convertToUTC()">Convert Local Time to UTC</button>
+  <button onclick="startTimer(5)">Start 5-Second Timer</button>
+</body>
+</html>

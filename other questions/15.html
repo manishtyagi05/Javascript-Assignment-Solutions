@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mad Libs Game</title>
+</head>
+<body>
+  <script>
+    // Collect name
+    const userName = prompt("Enter your name:");
+
+    // Collect 5 words
+    const word1 = prompt("Enter a noun:");
+    const word2 = prompt("Enter a verb:");
+    const word3 = prompt("Enter an adjective:");
+    const word4 = prompt("Enter another noun:");
+    const word5 = prompt("Enter an adverb:");
+
+    // Get color for highlight
+    const highlightColor = prompt("Enter a color (name or hex):");
+
+    // Helper to wrap word with highlight
+    function colorWrap(word) {
+      return `<span style="color:${highlightColor}; font-weight:bold;">${word}</span>`;
+    }
+
+ 
+    document.write(`<h2>Welcome, ${userName}!</h2>`);
+    document.write(`<p>Once upon a time, there was a ${colorWrap(word3)} ${colorWrap(word1)} who loved to ${colorWrap(word2)} every single day.</p>`);
+    document.write(`<p>One day, it found a mysterious ${colorWrap(word4)} that changed its life forever.</p>`);
+    document.write(`<p>From that moment on, it ${colorWrap(word2)} ${colorWrap(word5)} and never looked back.</p>`);
+    document.write(`<p>Everyone in the village admired the ${colorWrap(word1)} for being so ${colorWrap(word3)} and brave.</p>`);
+  </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <img id="marble" src="marble1.png" width="100">
+    <script>
+        let moving = true;
+        let marble = document.getElementById("marble");
+        let position = 0;
+
+        function animate() {
+            if (moving) {
+                position += 5;
+                marble.style.marginLeft = position + "px";
+                setTimeout(animate, 100);
+            }
+        }
+
+        marble.onmouseover = () => moving = false;
+        marble.onmouseout = () => { moving = true; animate(); };
+
+        animate();
+    </script>
+</body>
+</html>

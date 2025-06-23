@@ -1,0 +1,20 @@
+<html>
+<body>
+    <form onsubmit="return validate()">
+        Username: <input id="username"><br>
+        Password: <input type="password" id="pass"><br>
+        <button type="submit">Submit</button>
+    </form>
+    <script>
+        function validate() {
+            const user = document.getElementById("username").value;
+            const pass = document.getElementById("pass").value;
+            if (!user || !pass) {
+                alert("Please fill all fields");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>
